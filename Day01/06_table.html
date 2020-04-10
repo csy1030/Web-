@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- 表格是有结构化的行和单元格组成,用于数据的展示或辅助排版 -->
+        <table border="1px" width='200'>
+            <!-- table row 创建行 -->
+            <tr>
+                <!-- table head 单元格,自带加粗和居中效果 -->
+                
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>班级</th>
+            </tr>
+            <tr>
+                <td>csy</td>
+                <td>22</td>
+                <td>001</td>
+            </tr>
+            <tr>
+                <td>yf</td>
+                <td>22</td>
+                <td>002</td>
+            </tr>
+        </table>
+
+        <!-- 单元格合并,为单元格添加属性 -->
+        <!-- colspan:跨列合并
+             rowspan:跨行合并
+             取无单位的数值,表示包含自身在内合并几个单元格 -->
+        <table border='1px' width='300px'height='200px'>
+            <tr>
+                <td colspan="2">item</td>
+                <!-- 删除被合并的单元格,
+                     保持表格结构的完整 -->
+                <td>item</td>
+
+            </tr>
+            <tr>
+                <td>item</td>
+                <td rowspan="2">item</td>
+                <td>item</td>
+            </tr>
+            <tr>
+                <td>item</td>
+                <!-- <td>item</td> -->
+                <td>item</td>
+            </tr>
+        </table>
+        
+        <!-- 表格行分组:
+             可将表格中的若干行划分为一组,表示表头
+             表尾和表格主题
+            默认情况下,所有的行都会自动添加到tbody中显示 -->
+        <!-- thead 划分表头 -->
+        <table border="1px" width='300px'>
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                </tr>
+            </thead>
+            <!-- tfoot -->
+            <tfoot>
+                <tr>
+                    <td colspan="2">合计:</td>
+                </tr>
+            </tfoot>
+    
+            <tbody>
+                <tr>
+                    <th>csy</th>
+                    <th>22</th>
+                </tr>
+                <tr>
+                    <th>yf</th>
+                    <th>22</th>
+                </tr>
+            </tbody>
+        </table>
+        
+
+
+
+
+
+    </body>
+</html>

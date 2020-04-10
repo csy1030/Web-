@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <!-- 用户可点击超链接,跳转至其他资源文件 -->
+        <!-- href: 用于指定链接地址,常用网络地址 -->
+        <!-- 访问网络地址,必须填http:// -->
+        <!-- target属性 选填,用于设置目标文件的打开方式,
+        默认在当前窗口打开(_self),可以设置新建窗口打开(_blank) -->
+        <a href="http://www.baidu.com" target="_blank">baidu</a>
+        <a href="http://www.google.com"target="_blank">google</a>
+        <a href="http://www.youtube.com"target='_blank'>
+            <img src="man.jpg" width="300px" alt="">    
+        </a>
+
+        <!-- href 的特殊取值 -->
+        <!-- 空表示刷新 -->
+        <a href=""></a>
+
+        <!-- #号表示锚点,链接至本页,不会造成刷新,修改URL -->
+        <!-- 定义锚点,name属性设置锚点名称,自定义锚点链接中
+        地址使用#(锚点的标志),跟上锚点名称 -->
+        <a href="#5">href='#'</a>
+        <a name="5"></a>
+
+
+        <!-- javascript:void(0) 阻止超链接默认的点击跳转功能,
+        允许自定义点击事件 -->
+        <a href="javascript:void(0)">javascript:void(0)</a>
+        
+
+
+        
+
+    </body>
+</html>

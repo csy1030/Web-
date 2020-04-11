@@ -81,24 +81,25 @@
                 </p>
                 <p>
                     <!-- 多行文本域 -->
-                    <textarea name="uinfo" id="" cols="30" rows="10">个人介绍</textarea>
+                    <textarea name="uinfo" id="" cols="30" rows="10" placeholder="个人介绍"></textarea>
                 </p>
-            
 
 
-
+                <!-- 功能按钮:提交,重置,普通按钮,
+                    可以使用value属性设置按钮的显示文本 -->
 
 
                 <input type="submit" value='提交'>
+                <input type="reset" value='清空'>
+                <input type="button" value='点击'>
+                
+                <!-- button标签标示按钮,标签内容即为按钮的
+                显示文本,书写在form中,等价于提交按钮,书写在
+                form外就是普通按钮,需要自定义点击处理 -->
 
-
-
-
-
-            
-        
-        
+        <button>form内</button>
         </form>
+        <button>form外</button>
 
     </body>
 </html>

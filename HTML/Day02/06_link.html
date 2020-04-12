@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            /* a:link{
+                color: black;
+            }
+            a:visited{
+                color: cadetblue;
+            }
+            a:hover{
+                color: red;
+            }
+            a:active{
+                background-color: darkblue;
+            } */
+            a{
+                background: darkgoldenrod;
+                color: white;
+                /* 取消超链接默认下划线 */
+                text-decoration:none;
+            }
+            a:hover{
+                background-color: teal;
+            }
+            div{
+                width: 200px;
+                height: 200px;
+                background-color: turquoise;
+            }
+            div:hover{
+                width: 200px;
+                height: 200px;
+                background-color: tomato;
+            }
+            input:focus{
+                /* 取消输入框在焦点状态下的轮廓线 */
+                outline:none;
+            }
+            p span{
+                color:green
+            }
+            #d2{
+                color:hotpink
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+        <a href="05_children_selector.html">超链接</a>
+        <div>容器</div>
+        <input type="text" name="" id="">
+        <h1 id="d1" class="c1">
+            <p>
+                <span id="d2">
+                    示例文本
+                </span>
+            </p>
+        </h1>
+        
+    </body>
+</html>
+
+
+
+<!-- 作业:
+    1. 模拟淘宝横向导航栏,默认超链接为白色文本色,
+    字体大小为20px,取消下划线,当鼠标悬停超链接时,修改超链接背景色
+    2. 下拉菜单的隐藏与现实
+        display:none ; 设置元素隐藏
+        display:block; 设置元素现实
+-->

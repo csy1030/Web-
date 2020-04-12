@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            h1{
+                color: seagreen;
+            }
+            #d1{
+                background-color: thistle;
+            }
+            .c1{
+                background-color: teal;
+                color: white;
+            }
+            .c2{
+                /* 设置文本的水平对齐方式,默认居左 */
+                text-align: center;
+            }
+            /* 选择器组合使用 */
+            #d1,p.c1{
+                /* 匹配类名为c1的p元素 */
+                text-align: right;
+                text
+            }
+        </style>
+        
+
+    </head>
+    <body>
+        <h1 id='d1'>sam1</h1>
+        <h1 id="d1">sam2</h1>        <!-- 空格隔开 同时两个class -->
+        <h1 class='c1 c2'>sam3</h1>
+        <h1 class='c1'>sam4</h1>
+        <p class='c1'>sam5</p>
+    </body>
+</html>

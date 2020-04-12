@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            div span{
+                /* 不管是直接还是间接,都能找到 */
+                color:green;
+            }
+            div>span{
+                background-color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <!-- 直接子元素 -->
+            <span>div->span</span>
+            <p>
+                <!-- 间接子元素 -->
+                <span>div->p->span</span>
+
+            </p>
+        </div>
+
+    </body>
+</html>

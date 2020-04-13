@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{margin: 0;}
+            a{
+                text-decoration: none;
+                text-align: center;
+                color:white;
+                margin-right: 10px;
+                width: 100px;
+                display: inline-block;
+                height: 50px;
+                font-size: 20px;
+                /* 行高 */
+                line-height: 50px;
+
+
+            }
+            a:hover{
+                font-weight: 600;
+                color: white;
+                background-color: red;
+                border-radius: 20px;
+                box-shadow:  black 5px 5px 5px;
+            }
+            #nav{
+                width: 540px;
+                height: 50px;
+                margin: 0 auto;
+                background-color: orangered;
+                border-radius: 20px;
+                /* 父元素字体为0,解决水平方向上
+                由于代码换行导致子元素之间出现的空隙 */
+                font-size: 0;
+                box-shadow: black 10px 5px 5px;
+            }
+            .no_margin{
+                margin-right: 0;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div id='nav'>
+            <a href="">淘宝</a>
+            <a href="">天猫</a>
+            <a href="">聚划算</a>
+            <a href="">热卖</a>
+            <a href="" class='no_margin'>闲鱼</a>
+        </div>
+
+    </body>
+</html>

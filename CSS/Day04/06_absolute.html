@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body,ul{
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+            #banner{
+                width: 1000px;
+                height: 600px;
+                margin: 0 auto;
+                position: relative;
+            }
+            #car{
+                width: 1000px;
+                height: 600px;
+               
+            }
+            #banner ul{
+                width: 90px;
+                position: absolute;
+                left:50%;
+                margin-left: -45px;
+                /* background-color: red; */
+                bottom: 20px;
+            }
+            #banner li{
+                float: left;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: white;
+                margin-right: 10px;
+
+            }
+            #banner ul li:last-child{
+                margin: 0;
+
+            }
+            #banner li:hover{
+                background-color: gray;
+
+            }
+               
+
+            #banner a{
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                top: 50%;
+                margin-top: -40px;
+                /* border-radius: 50%; */
+                background-image: url("arr_right.png");
+                background-size:cover;
+
+            }
+            #banner .left{
+                float: left;
+                right:5px
+            }
+            #banner .right{
+                float: right;
+                left:5px
+            }
+        </style>
+
+    </head>
+    <body>
+        <div id='banner'>
+            <img src="car.jpg" alt="" id='car'>
+            <!-- <img src="arr_right.png" alt="" id='arr_l'>
+            <img src="arr_right.png" alt="" id='arr_r' > -->
+            
+            
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <a class='left' href="javascript:void(0)"></a>
+            <a class='right' href="javascript:void(0)"></a>
+        </div>
+        
+    </body>
+</html>

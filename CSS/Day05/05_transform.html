@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a = 100
+        var b = true
+        var s1 = a.toString()
+        var s2 = b.toString()
+        console.log(s1,typeof s1)
+        console.log(s2,typeof s2)
+
+        // Number()
+        var n1 = '12a'
+        var n2 = '120'
+        console.log(Number(n1),Number(n2))
+        console.log(parseInt(15.3))
+        console.log(parseInt("hello"))
+
+        // boolean()
+        // 字符串为真
+        console.log(Boolean(1))
+        console.log(Boolean('10'))
+        // 零为假
+        console.log(Boolean(0))
+        console.log(Boolean(0.0))
+        console.log(Boolean(""))
+
+        // 自动类型转换
+        var r1 = '10'+'5'
+        var r2 = 5 +'20'
+        var r4 = true + '20'
+        console.log(r1,r2,r4)
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

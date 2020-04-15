@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a = 10
+        a ++
+        ++ a
+        console.log(a)
+        var b = '10'
+        b += 1
+        // 包含自动类型转换,转成number进行值的加减
+        b ++
+        console.log(b,typeof b)
+
+        var res1 = 'a' > 'b'
+        console.log(res1)
+
+        // var year = 2019
+		// res = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)
+        // console.log(res)
+
+        // 带输入框的弹框,参数为字符串,表示提示信息,
+        // 返回用户输入的内容
+        var year = prompt("请输入年份:")
+        if (year){
+            var res = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)
+            
+            console.log(res)
+            prompt('%s是闰年'%year)
+        }
+        else{
+            prompt('请输入年份:')
+        }
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

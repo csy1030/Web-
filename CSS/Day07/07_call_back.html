@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button onclick = 'f1()'></button> -->
+    <button id = 'btn2'>跳转到Google</button>
+    <script>
+
+
+        btn2.onclick = function(){
+            var seconds = 5
+            setInterval(
+            function(){
+                if (seconds > 0){
+                seconds --
+            console.log("页面将在",seconds,"秒后跳转...")
+            }
+            else{
+                location.href='http://www.google.com'
+            }
+
+            },1000)
+        }
+
+
+        
+    </script>
+</body>
+</html>

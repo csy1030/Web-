@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1990.1.1 是星期一
+        // 闰年判断函数,点击btn输入年月日,判断是星期几
+
+        function isLeapYear(year){
+            return year % 4 == 0 && year % 100 != 0 || year % 400 == 0
+        }
+
+        function whichDay(y,m,d){
+            var days = 0
+            for (var i = 1990; i < y; i ++){
+                isLeapYear(i) ? days += 366 : days += 365                
+            }
+            var day31 = [1,3,5,7,8,10,12]
+
+            for (var i = 1; i < m; i ++){
+                if (day31.indexOf(i) != -1){
+                    days += 31
+                }
+                else if (i == 2){
+                    isLeapYear(y) ? days += 29 : days += 28
+                }
+                else{
+                    days += 30
+                }
+                
+            }
+            return (days + d) % 7
+        }
+
+        function main(){
+            y = Number(prompt("Enter year:"))
+            m = Number(prompt("Enter month:"))
+            d = Number(prompt("Enter day:"))
+            show = y + '/' + m + '/' + d + '是星期' + whichDay(y,m,d)  
+            alert(show)
+
+
+        }
+
+
+    </script>
+    <style>
+        h1{
+            width: 500px;
+            height: 100px;
+            
+            background: green;
+        }
+    </style>
+
+
+</head>
+<body>
+    <h1 onclick = "main()">计算星期几</h1>
+    
+</body>
+</html>

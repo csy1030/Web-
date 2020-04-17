@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>二进制</p>
+    <p id = 'binary'></p>
+    <p>八进制</p>
+    <p id = 'octonary'></p>
+    <script>
+        var num = 123
+        var binaryList = []
+        while (num > 0){
+            binaryList.unshift(num % 2)
+            num = parseInt(num / 2)
+             
+        }
+        binary.innerHTML = binaryList
+
+        var num1 = 123
+        var octList = []
+        while (num1 > 0){
+            octList.unshift(num1 % 8)
+            num1 = parseInt(num1 / 8)
+             
+        }
+        octonary.innerHTML = octList
+
+        
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

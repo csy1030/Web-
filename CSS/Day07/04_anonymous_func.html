@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // function add(num1,num2){
+        //     return num1 + num2
+        // }
+        // var res = window.add(10,20)
+        // console.log(res)
+
+        // 使用匿名自调函数
+        // (function(num1,num2){
+        //     console.log(num1 + num2)
+        // })(100,200)
+
+        // 练习:创建一个匿名自调函数,计算累加和
+        (function(start,end){
+            var sum = 0
+            for (var i = start; i <= end; i ++){
+                sum += i
+            }
+            console.log(sum)
+        })(20,40)
+
+        var seconds = 5
+        var jump = function(){
+            if (seconds > 0){
+                seconds --
+            console.log("页面即将跳转...",seconds)
+            }
+            else{
+                location.href='http://www.google.com'
+            }
+            
+        }
+        // JS中的定时器函数,每隔指定的时间,就由JS解释器调用指定函数,
+        // 参数1是要指定的任务,参数2是时间间隔单位ms
+        setInterval(jump,1000)
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

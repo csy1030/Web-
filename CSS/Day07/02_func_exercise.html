@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function cumulativeAdd(start,end){
+            var sum = 0
+            for (var i = start; i <= end; i ++){
+                sum += i
+            }
+            return sum
+        }
+
+        function doCumulativeAdd(){
+            var start = Number(prompt("输入起始数值:"))
+            var end = Number(prompt("输入结束数值:"))
+            var result = cumulativeAdd(start,end)
+            alert(result)
+        }
+    </script>
+</head>
+<body>
+    <button onclick="doCumulativeAdd()">计算累加和</button>
+    
+</body>
+</html>

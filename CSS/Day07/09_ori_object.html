@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul li{
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+    <ul id = 'ulscoreList'></ul>
+    <script>
+               
+        
+        var bookPrice = [23,5,46,43,88]
+        var userName = ['Sam','Jenny','Jack','Kevin']
+        var isOnSale = [true,false,true,true]
+
+        // 练习:创建一个数组,保存三个学生的高考分数
+        // 试着依次输出每个成绩
+        // 依次给每个成绩+5分
+        // 在数组尾部添加两个新的成绩
+        // 试着依次输出每个成绩
+        var html = ''
+        var scoreList = [650,637,710]
+        // for (var i = 0; i < scoreList.length; i++){
+        //     console.log(scoreList[i])
+        // }
+        // for (var i = 0; i < scoreList.length; i++){
+        //     scoreList[i] += 5
+        //     console.log(scoreList[i])
+        // }
+        scoreList[scoreList.length] = 555
+        scoreList[scoreList.length] = 568
+        for (var i = 0; i < scoreList.length; i++){
+            html += '<li>' + scoreList[i] + '</li>'
+        }
+        ulscoreList.innerHTML = html
+
+        scoreList.forEach(function(value,index){
+            console.log('')
+        })
+    </script>
+</body>
+</html>

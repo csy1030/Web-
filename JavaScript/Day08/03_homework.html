@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <h2>使用数组呈现数据-商品列表</h2>
+    <table width = '100%' border = '1'>
+        <thead>
+            <tr>
+                <th>编号</th>
+                <th>名称</th>
+                <th>单价</th>
+                <th>生产日期</th>
+            </tr>
+        </thead>
+        <tbody id = 'tbodyLaptop'>
+            <tr>
+                <td colspan="4">加载中...</td>
+                
+            </tr>
+        </tbody>
+    </table>
+    
+    <script>
+        // 方案1: 使用二维数组存储所有笔记本数据
+        var data1 = [
+            [5001,'戴尔-燃7000',5000,'2018/05'],
+            [5003,'小米Pro',6800,'2018/08'],
+            [5012,'MacBook Pro',12000,'2018/09'],
+            [5001,'HP-Specture-360',8000,'2018/05'],
+        ]
+
+
+        // 遍历整个数组,构建一段HTML文本
+
+        // var html = ''
+        // data1.forEach(function(pc,i){
+        //     html += "<tr>"
+        //     html += "<td>" + pc[0] + '</td>'
+        //     html += "<td>" + pc[1] + '</td>'
+        //     html += "<td>" + pc[2] + '</td>'
+        //     html += "<td>" + pc[3] + '</td>'
+        //     html += "</tr>"
+        // })
+        // tbodyLaptop.innerHTML = html
+
+        // 方案2: 存储所有笔记本数据
+        var data2 = [
+            {
+                pid:5001,
+                pname:'MacBook',
+                price:12888,
+                pdate:'2018/09/20'
+            },
+            {
+                pid:3347,
+                pname:'HP-specture',
+                price:7888,
+                pdate:'2019/09/20'
+            },
+        ]
+
+        var html = ''
+        data2.forEach(function(pc,i){
+            html += "<tr>"
+            html += "<td>" + pc.pid + '</td>'
+            html += "<td>" + pc.pname + '</td>'
+            html += "<td>" + pc.price + '</td>'
+            html += "<td>" + pc.pdate + '</td>'
+            html += "</tr>"
+        })
+        tbodyLaptop.innerHTML = html
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

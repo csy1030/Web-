@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id = 'start'>开始</button>
+    <button id = 'loop'>计次</button>
+    <span id = 'iminute'>00</span>
+    :
+    <span id = 'isecond'>00</span>
+    :
+    <span id = 'milsec'>00</span>
+    <button id = 'reset'>重置</button>
+
+    <div>
+        时间记录
+        <div id = 'record'></div>
+    </div>
+
+
+
+    <script>
+        var isStart = false
+        var loop_num = 0
+
+        start.onclick = function(){
+            loop_num = 0
+            isStart = !isStart
+            if(isStart){
+                // 开始计时
+                start.innerHTML = '停止'
+                var start_time = new Date()
+                var start_hour = start_time.getHours()
+                var start_min = start_time.getMinutes()
+                var start_sec = start_time.getSeconds()
+
+                dif_min = 0
+                timer = setInterval(function(){
+                    var now = new Date()
+                    mSec = now.getMilliseconds()
+                    var hour = now.getHours()
+                    var second = now.getSeconds()
+                    var minute = now.getMinutes()
+                    dif_sec = ((hour - start_hour) * 60 + minute - start_min) * 60 + second - start_sec
+                    
+
+                    milsec.innerHTML = mSec
+                    if (dif_sec < 10){
+                        show_sec = '0' + dif_sec
+                        isecond.innerHTML = show_sec
+                    }else{
+                        show_sec = dif_sec
+                        isecond.innerHTML = show_sec
+                    }
+                    if (dif_sec > 59){
+                        dif_min += 1
+                        start_time = new Date()
+                        start_hour = start_time.getHours()
+                        start_min = start_time.getMinutes()
+                        start_sec = start_time.getSeconds()
+                    }
+                
+
+                if (dif_min < 10){
+                    show_min = '0' + dif_min
+                    iminute.innerHTML = show_min
+                }else{
+                    show_min = dif_min
+                    iminute.innerHTML = show_min
+                }
+            },10)
+                
+
+            }else{
+                start.innerHTML = '开始'
+                // 停止计时
+                clearInterval(timer)
+
+            }           
+        }
+        html = ''
+        loop.onclick = function(){
+            loop_num += 1
+            html += '<p>' + loop_num + '.' +show_min + ':' + show_sec + ':' + mSec + '</p>'
+            record.innerHTML = html
+        }
+        reset.onclick = function(){
+            if(!isStart){
+                html = ''
+                record.innerHTML = ''
+                iminute.innerHTML  = '00'
+                isecond.innerHTML  = '00'
+                milsec.innerHTML  = '00'
+            }
+            
+        }
+
+
+    </script>
+</body>
+</html>

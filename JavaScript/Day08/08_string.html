@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #isVarified{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <p>请输入验证码:</p>
+    <input id = 'code_input'>
+    <span id = 'code_show'></span>
+    <button id = 'verify'>验证</button>
+    <span id = 'isVerified'></span>
+
+
+
+    <script>
+        var s = 'maliao'
+        console.log(s)
+        console.log(s.charAt(3))
+
+        // 练习:随机产生4个验证码
+        var pool = 'ABCDEFGHJKMNPQRSTUVWXYZabcdefghijkmnpqrstwx23456789'
+
+        var rdm_num
+        var code = ""
+        function createCode(){
+            for(var i = 0; i < 4; i ++){
+            rdm_num = parseInt(Math.random()*pool.length)
+            code += pool.charAt(rdm_num)
+            }
+        }
+        createCode()
+        code_show.innerHTML = code
+        
+       
+
+        verify.onclick =  function(){
+            if (code_input.value.toLowerCase() == code.toLowerCase()){
+                isVerified.innerHTML = '√'
+            }else{
+                isVerified.innerHTML = 'X 请重新输入'
+                document.getElementById("code_input").value = ""
+                document.getElementById("code_show").value = ""
+                code = ""
+                
+                createCode()
+                code_show.innerHTML = code
+            }
+
+        }
+    </script>
+
+</body>
+</html>

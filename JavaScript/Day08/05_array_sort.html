@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var scores = [33,11,44,66,77,84,23]
+
+        // console.log(scores.sort(function(e1,e2)
+        // { return e1-e2 }))
+        // 复杂数组排序
+        var list = [
+            {uid:10,price:44,count:20},
+            {uid:4,price:50,count:32},
+            {uid:8,price:76,count:32},
+            {uid:3,price:12,count:50},
+        ]
+		console.log(list.sort(function(e1,e2){
+            return e1.price - e2.price
+        }))
+    </script>
+</body>
+</html>

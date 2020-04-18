@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+    <input id = 'input_str'>
+    <button id ='check'>检查@</button>
+    <span id = 'result'></span>
+
+
+    <script>
+        // var s = 'acdsf12312f曹枢洋'
+        // var code = s.charCodeAt(13)
+        // console.log(s.charAt(13),code)
+
+        
+        check.onclick = function (){
+            var code =  input_str.value
+            if (code.indexOf('@') != -1 && code.indexOf('@') == code.lastIndexOf('@')){
+                result.innerHTML = '有且只有一个@'
+            }else if(code.indexOf('@') == -1){
+                result.innerHTML = '不存在@'
+        }
+        else{
+            result.innerHTML = '不只有一个@'
+        }  
+        }
+        
+
+
+
+
+    </script>
+</body>
+</html>

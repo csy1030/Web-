@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <input id = 'inputdata'type="text">
+    <button id = 'seperate'>拆分</button>
+    <span>用户名:</span>
+    <span id ='uname'>____</span>
+    <span>域名:</span>
+    <span id = 'ip'>____</span>
+
+    <script>
+        // 练习:在输入框中用户输入了一个合法的邮箱地址
+        // 输出该邮箱中的用户名和域名部分
+        seperate.onclick = function(){
+            var addr = inputdata.value
+            uname.innerHTML = addr.substring(0,addr.indexOf('@'))
+            ip.innerHTML = addr.substring(addr.indexOf('@') + 1)
+            
+        }
+
+
+
+    </script>
+</body>
+</html>

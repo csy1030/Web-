@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id = 'hour'>00</span>
+    :
+    <span id = 'minute'>00</span>
+    :
+    <span id = 'second'>00</span>
+    <hr>
+    <button id = 'clk_start'>时间启动</button>
+    <button id = 'clk_stop'>时间静止</button>
+    
+    <script>
+        clk_start.onclick = function(){
+            timer = setInterval(function(){
+            var now = new Date()
+            var ihour = now.getHours()
+            var iminute = now.getMinutes()
+            var isecond = now.getSeconds()
+            if (ihour < 10){
+                hour.innerHTML = '0'+ihour
+            }else{
+                hour.innerHTML = ihour
+            }
+            if (iminute < 10){
+                minute.innerHTML = '0'+iminute
+            }else{
+                minute.innerHTML = iminute
+            }
+            if (isecond < 10){
+                second.innerHTML = '0'+isecond
+            }else{
+                second.innerHTML = isecond
+            }
+
+        },1000)
+        }
+        // JS中获取当前时间
+        
+
+        
+        clk_stop.onclick = function(){clearInterval(timer)}
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id = 'btn'>删除用户</button>
+    <script>
+        btn.onclick = function(){
+            var choice = confirm('此操作不可恢复,您确定么?')
+            if(choice){
+                console.log('正在删除...')
+            
+            }else{
+                console.log("删除已取消")
+            }
+        }
+    </script>
+</body>
+</html>

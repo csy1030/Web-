@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src = 'index.js'></script>
+</head>
+<body>
+    <div>
+        <p>参考1</p>
+        <h1 id = 'd1' class = 'c1'>一级标题</h1>
+        <p>参考2</p>
+    </div>
+    <script>
+        // 获取
+        var h1 = $('h1')
+        var div = $('div')
+        console.log(h1.parentNode)
+        console.log(h1.childNodes)
+        console.log(h1.children)
+        // 获取兄弟节点
+        console.log(h1.nextElementSibling)
+        console.log(h1.previousElementSibling)
+
+        // 获取属性节点列表
+        console.log(h1.attributes)
+
+
+
+
+    </script>
+</body>
+</html>

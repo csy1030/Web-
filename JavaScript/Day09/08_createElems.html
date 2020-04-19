@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 创建元素节点
+        var h1 = document.createElement('h1')
+        h1.innerHTML = '动态创建的标题'
+        h1.style.color = 'green'
+        h1.id = 'd1'
+        console.log(h1)
+        console.log(window)
+        // body作为document对象的属性存在,可以直接访问
+        document.body.appendChild(h1)
+        // 动态创建的节点与页面元素一一对应,需要显示几个页面元素
+        // 就需要创建几个元素节点
+
+        // 动态创建h2标题,插入到h1之前显示
+        var h2 = document.createElement('h2')
+        h2.innerHTML = '动态创建的h2'
+        h2.style.color = 'blue'
+        h2.id = 'd2'
+        document.body.insertBefore(h2,h1)
+
+    </script>
+</body>
+</html>

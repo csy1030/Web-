@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src = 'index.js'></script>
+    <style>
+        #d1{
+            color: red;
+        }
+        .c1{
+            background: brown;
+        }
+    </style>
+</head>
+<body>
+    <h1>样式操作</h1>
+    <p>操作行内样式</p>
+    <script>
+        var h1 = $('h1')
+        h1.id = 'd1'
+        h1.className = 'c1'
+
+        var p = $('p')
+        p.style = "width: '300px';background:'blue'"
+        // p.style.background = 'pink'
+    </script>
+</body>
+</html>

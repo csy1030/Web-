@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js"></script>
+
+</head>
+<body>
+    <h1>属性操作</h1>
+    <script>
+        var h1 = $('h1')
+        h1.id = 'd1'
+        // h1.name = 'info'
+        h1.className = 'c1'
+
+        // 移除属性
+        h1.id = ""
+        h1.className = null
+
+        h1.setAttribute('id','box')
+        console.log(h1.getAttribute('id'))
+        
+    </script>
+    
+</body>
+</html>

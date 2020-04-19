@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src = 'index.js'></script>
+    <style>
+        div{
+            width:200px;
+            height:200px;
+            background: red;
+
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div onclick = "alert('被单击了')"></div>
+    <script>
+        var div = $('div')
+        div.onmouseover = function(){
+            console.log('鼠标移入')
+        }
+        div.onmouseout = function(){
+            console.log('鼠标移出')
+        }
+        div.onmou
+
+    </script>
+</body>
+</html>

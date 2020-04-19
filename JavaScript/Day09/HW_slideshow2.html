@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src = 'index.js'></script>
+    <style>
+        div,img{
+            width: 512px;
+            height: 288px;
+            /* background: grey; */
+        }
+        img{
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div id = 'slide'>
+        
+        <img src="img1.jpg" alt="" id = 'img1'>
+        <img src="img2.png" alt="" id = 'img2'>
+        <img src="img3.jpg" alt="" id = 'img3'>
+        <img src="img4.jpg" alt="" id = 'img4'>
+        <img src="img5.png" alt="" id = 'img5'>
+    </div>
+    <script>
+        var slide = document.getElementById('slide')
+        
+        var count = 0
+        var img1 = document.getElementById('img1')
+        var img2 = document.getElementById('img2')
+        var img3 = document.getElementById('img3')
+        var img4 = document.getElementById('img4')
+        var img5 = document.getElementById('img5')
+
+        var timer = setInterval(onSlide,2000)
+        function onSlide(){
+            count += 1
+            img1.style.display = 'none'
+            img2.style.display = 'none'
+            img3.style.display = 'none'
+            img4.style.display = 'none'
+            img5.style.display = 'none'
+            switch(count){
+                case 1:
+                    
+                    img1.style.display = 'block'
+                    break
+                case 2:
+                    
+                    img2.style.display = 'block'
+                    break
+                case 3:
+                    
+                    img3.style.display = 'block'
+                    break
+                case 4:
+                    
+                    img4.style.display = 'block'
+                    break
+                case 5:
+                    
+                    img5.style.display = 'block'
+                    count = 0
+                    break
+
+            }
+        }
+
+        var isCleared = false
+        slide.onmouseover = function(){
+            isCleared = true
+            clearInterval(timer)
+        }
+        slide.onmouseout = function(){
+            if(isCleared){
+                timer = setInterval(onSlide,2000)
+            }
+            
+        }
+
+    </script>
+</body>
+</html>   

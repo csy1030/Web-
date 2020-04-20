@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src = 'index.js'></script>
+    <style>
+        div{
+            width: 512px;
+            height: 288px;
+            margin:50px auto
+            /* background: grey; */
+        }
+        div img{
+            width: 512px;
+            height: 288px;
+            display: none;
+        }
+    </style>
+
+
+    <script>
+        window.onload = function(){
+            var banner = $('div')
+            var imgs = banner.children
+            var index = 0
+            var time = setInterval(autoplay,1500)
+            function autoplay(){
+                // 当前图片隐藏
+                imgs[index].style.display = 'none'
+                
+
+                // 更新下标
+                index ++
+                if(index == imgs.length){
+                    index = 0
+                }
+                // 元素显示
+                imgs[index].style.display = 'block'
+            }
+
+        }
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

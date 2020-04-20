@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.5.0.min.js"></script>
+    <script>
+        window.onload = function () { 
+            console.log($("h1"));
+            // 操作元素内容,jquery对象会内部遍历所有元素,
+            // 统一修改
+            $('h1').html('动态修改')
+            console.log($('h1')[0])
+            // 转原生
+            $("h1").get(1).innerHTML = "get(index)转原生"
+            // js原生对象转换jquery对象
+            var h1 = $("h1")[0]
+
+            // jquery提供eq(index)从元素列表中获取指定元素,返回jquery对象
+            $("h1").eq(2).html("eq(index)返回jquery对象")
+            
+        }
+    </script>
+</head>
+<body>
+    <h1>标题</h1>
+    <h1>标题</h1>
+    <h1>标题</h1>
+    <h1>标题</h1>
+</body>
+</html>

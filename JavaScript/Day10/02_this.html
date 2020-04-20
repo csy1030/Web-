@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js"></script>
+    
+    <style>
+        ul,ol{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            width: 200px;
+            background: orangered;
+            /* 修改鼠标指针的显示形状 */
+            /* 手 */
+            cursor: pointer; 
+            
+        }
+        ol{
+            background: orangered;
+            display: none;
+        }
+        /* 匹配第一个li元素 */
+        /* 鼠标滑过显示下拉菜单 */
+        ul li:first-child:hover ol{
+            display: block;
+        }
+        ol li:hover{
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li >
+            <span>beijing</span>
+            <ol id = 'selectbox'>
+                <li>beijing</li>
+                <li>new york city</li>
+                <li>LA</li>
+                <li>shanghai</li>
+            </ol>
+        </li>
+    </ul>
+
+    <script>
+        var span = $('span')
+        var ol = $("ol")
+        var lis = ol.children
+        for(var i in lis){
+            lis[i].onmouseover = function(){
+                // 传值
+            // this 指点击的条目
+            span.innerHTML = this.innerHTML
+            }
+        }
+           </script>
+</body>
+</html>

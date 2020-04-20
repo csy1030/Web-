@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="C://jquery-3.5.0.js"></script>
+    
+</head>
+<body>
+    <h1>标题</h1>
+    <h1>标题</h1>
+    <h1>标题</h1>
+    <h1>标题</h1>
+    <h1>标题</h1>
+    <h1>标题</h1>
+    <h1>标题</h1>
+    <h1>标题</h1>
+    <h1>标题</h1>
+    <h1>标题</h1>
+    <button onclick = 'first()'>:first</button>
+    <button onclick = 'last()'>:last</button>
+    <button onclick = 'odd()'>:odd</button>
+    <button onclick = 'even()'>:even</button>
+
+    <button onclick="eq()">:eq()</button>
+    <button onclick="gt()">:gt()</button>
+    <button onclick="lt()">:lt()</button>
+    <button onclick="not()">:not()</button>
+
+    <script>
+        function first() { 
+            // 匹配第一个h1
+            $("h1:first").css("color",'red')
+         }
+        function last() { 
+        // 匹配第一个h1
+        $("h1:last").css("color",'green')
+        }
+        function odd() { 
+            $("h1:odd").css("background",'brown')
+         }
+         function even() { 
+            $("h1:even").css("background",'cyan')
+         }
+         function eq() { 
+            $("h1:eq(5)").css("background",'purple')
+         }
+         function gt() { 
+            $("h1:gt(6)").css("background",'orange')
+         }
+         function lt() { 
+            $("h1:lt(3)").css("background",'lightblue')
+         }
+         function not(){
+             $("h1:not(:eq(5))").css("color",'green')
+         }
+    </script>
+</body>
+</html>

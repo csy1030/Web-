@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js"></script>
+    <script>
+        window.onload = function(){
+            // 获取元素
+            var form = $("form")
+            var uname = $("input")
+            var hobby = $("input",1)
+            // 输入框相关的事件
+            uname.onfocus = function(){
+                console.log('输入框获取到焦点');
+            }
+            uname.onblur = function(){
+                console.log('失去焦点',uname.value);
+            }
+            // 实时监听输入
+            // uname.oninput = function(){
+            //     console.log(uname.value);
+            // }
+            uname.onchange = function(){
+                console.log("onchange",uname.value);
+            }
+            // 监听按钮状态值
+            hobby.onchange = function(){
+                console.log(hobby.checked);
+            }
+            // onsubmit:由form监听,在点击提交按钮自动触发,允许在事件处理函数
+            // 中返回一个布尔值,true表示允许发送,false表示阻止提交
+            form.onsubmit = function(){
+                // 用户名为空时,不允许提交
+                return uname.value.length == 0 ? false : true
+            }
+           
+        }
+    </script>
+</head>
+<body>
+    <!-- autocomplete可以关闭自动补全 -->
+    <form action="/login" method = 'GET' autocomplete="off">
+        <p>
+            用户名
+            <input type="text" name="uname" placeholder = '' maxlength = '10' id="">
+        </p>
+        <p>
+            用户兴趣
+            <input type="checkbox" name = 'hobby' value = 'study' checked >学习
+
+        </p>
+        <input type="submit" name="" id="">
+    </form>
+</body>
+</html>

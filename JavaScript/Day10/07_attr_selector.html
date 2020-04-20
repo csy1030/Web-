@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="C://jquery-3.5.0.js"></script>
+    <script>
+        window.onload = function(){
+            console.log($("[id]"));
+            console.log($("[id = d1]"));
+            console.log($("[id ^= d]"));
+            console.log($("[id $= d]"));
+            console.log($("[id *= 1]"));
+        }
+    </script>
+</head>
+<body>
+    <h1 id = 'd1'>标题</h1>
+    <h1 id = 'd2'>标题</h1>
+    <h1 id = 'c1d'>标题</h1>
+    <h1>参考</h1>
+</body>
+</html>

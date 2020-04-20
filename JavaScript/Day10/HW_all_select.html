@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="C://jquery-3.5.0.js"></script> -->
+    <script src = 'index.js'></script>
+</head>
+<body>
+    <input type="checkbox" id = 'all'>All
+    <div>
+        
+        <input type="checkbox">A
+        <input type="checkbox">B
+        <input type="checkbox">C
+        <input type="checkbox">D
+        <input type="checkbox">E
+        <input type="checkbox">F
+    </div>
+    <script>
+        
+
+        window.onload = function(){
+            // var boxes = $("div input")
+            // console.log(boxes);
+            var div = $("div")
+            var boxes = div.children
+            var count = 0
+            for (var i in boxes){
+                boxes[i].onchanged = function(){
+                    count ++
+                }
+            }
+            if(count == boxes.length){
+                document.getElementById("all").style.checked = 'true'
+            }
+            // boxes.onchanged = function () { 
+            //     console.log("ok");
+            //  }
+        }
+        
+    </script>
+</body>
+</html>

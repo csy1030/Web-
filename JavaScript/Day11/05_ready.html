@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="C://jquery-3.5.0.js"></script>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+        }
+    </style>
+    <script>
+        // $(document).ready(function(){
+        //     // alert('1')
+        // })
+        // $(function(){
+        //     // alert("3")
+        // })
+        $(function(){
+            // alert("5")
+            $("div").on("click",function () { 
+                alert("div被点击")
+             })
+             .bind("mouseover",function(){
+                 console.log('鼠标移入');
+             })
+             .mouseleave(function(){
+                 console.log("鼠标移出");
+             })
+
+             $("li").click(function(){
+                 $("h1").html($(this).html())
+             })
+        })
+    </script>
+</head>
+<body>
+    <ul>
+        <li>Sam</li>
+        <li>Jenny</li>
+        <li>Frank</li>
+    </ul>
+    <h1></h1>
+    <div></div>
+</body>
+</html>

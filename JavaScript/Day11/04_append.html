@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="C://jquery-3.5.0.js"></script>
+    
+</head>
+<body>
+    <script>
+        // 创建元素
+        var elem1 = $("<h1 id ='d1' style = 'color:orange'>sam</h1>")
+        var elem2 = $("<h1></h1>")
+        var elem3 = $("<h1>Jenny</h1>")
+        var elem4 = $("<h1>Frank</h1>")
+        elem2.html("ahaha").attr('id','d2').css("color",'green')
+        // 添加元素
+        $("body").append(elem1).prepend(elem2)
+        elem2.after(elem3)
+        elem1.before(elem4)
+        elem2.remove()
+    </script>
+</body>
+</html>

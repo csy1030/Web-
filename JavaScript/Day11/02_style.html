@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="C://jquery-3.5.0.js"></script>
+    <style>
+        .c1{
+            font-weight: 700;
+        }
+        .c2{
+            color:red
+        }
+    </style>
+</head>
+<body>
+    <p>段落</p>
+    <span>操作类名</span>
+    <label for="">label</label>
+    <button onclick = 'show()'>show</button>
+    <div></div>
+    <script>
+        $("div").css("height","200px").css("border","1px solid red")
+        
+        function show(){
+            $("label").toggleClass("c1 c2")
+        }
+        $("p").attr("id","d1").prop("class","c2")
+        $("span").attr("class","c1")
+.addClass("c2")    </script>
+</body>
+</html>

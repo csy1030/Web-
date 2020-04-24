@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="C://jquery-3.5.0.js"></script>
+</head>
+<body>
+    <h1>标题</h1>
+    <input type="checkbox">
+    <button onclick = 'show()'>show</button>
+    <script>
+        // jquery的链式调用
+        $("h1").attr("id",'d1').prop("class","c1 c2")
+        console.log($("h1").attr("id"));
+        // 通过按钮操控checked状态切换
+        function show() { 
+            var isChecked = $("input").prop('checked')
+            $("input").prop('checked',!isChecked)  }
+        
+    </script>
+</body>
+</html>

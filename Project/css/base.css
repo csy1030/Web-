@@ -1,0 +1,22 @@
+/* 界面基础样式 */
+
+
+body,h1,h2,h3,h4,h5,h6,p,ul,ol{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+body{
+    background: black;
+    font: 12px Felix Titling, Arial;
+    color: white;
+    /* color: #ccc; 默认灰色 */
+    padding-top: 50px;
+}
+a{
+    color:white;
+    text-decoration: none;
+}
+input:focus{
+    outline: none;
+}
